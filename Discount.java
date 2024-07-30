@@ -5,18 +5,21 @@ public class Discount {
         int discount;
         char membership = 'D';
         int finalPrize;
+        int getDiscount;
 
         if (membership == 'G') {
             discount = 10;
-            finalPrize = prize - (prize * discount) / 100;
-            System.out.println("your final prize is:" + finalPrize);
+
         } else if (membership == 'D') {
             discount = 20;
-            finalPrize = prize - (prize * discount) / 100;
-            System.out.println("your final prize is:" + finalPrize);
 
         } else {
-            System.out.println("your final prize is:" + prize);
+            discount = 2;
         }
+
+        getDiscount = (prize * discount) / 100;
+        System.out.println("you got $" + getDiscount + " of discount of this product");
+        finalPrize = prize - (prize * discount) / 100;
+        System.out.println("your final prize is: $" + finalPrize);
     }
 }
